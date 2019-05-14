@@ -1,6 +1,8 @@
 <template>
 <div>
-    <input v-model="input" placeholder="Find a reservation">
+    <div class="input-wrapper">
+    <input  v-model="input" placeholder="n">
+    </div>
   <table class="rtable">
     <thead>
         <tr>
@@ -86,6 +88,9 @@ export default {
 // http://dbushell.com/2016/03/04/css-only-responsive-tables/
 // by David Bushell
 */
+.input-wrapper{
+    width:100vw;
+}
 a {
     text-decoration: none;
     color:black;
