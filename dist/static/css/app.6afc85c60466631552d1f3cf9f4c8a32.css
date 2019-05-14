@@ -1,0 +1,16 @@
+#app{font-family:Avenir,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-align:center;color:#2c3e50;margin-top:60px}h1[data-v-6b8a8c87],h2[data-v-6b8a8c87]{font-weight:400}ul[data-v-6b8a8c87]{list-style-type:none;padding:0}li[data-v-6b8a8c87]{display:inline-block;margin:0 10px}a[data-v-6b8a8c87]{color:#42b983}
+/*!
+// CSS only Responsive Tables
+// http://dbushell.com/2016/03/04/css-only-responsive-tables/
+// by David Bushell
+*/.input-wrapper{width:100vw}a{text-decoration:none;color:#000}.rtable{
+  /*!
+  // IE needs inline-block to position scrolling shadows otherwise use:
+  // display: block;
+  // max-width: min-content;
+  */display:inline-block;vertical-align:top;max-width:100%;overflow-x:auto;white-space:nowrap;border-collapse:collapse;border-spacing:0}.rtable,.rtable--flip tbody{-webkit-overflow-scrolling:touch;background:radial-gradient(left,ellipse,rgba(0,0,0,.2) 0,transparent 75%) 0,radial-gradient(right,ellipse,rgba(0,0,0,.2) 0,transparent 75%) 100%;background-size:10px 100%,10px 100%;background-attachment:scroll,scroll;background-repeat:no-repeat}.rtable--flip tbody tr:first-child a,.rtable td:first-child{background-image:linear-gradient(90deg,#fff 50%,hsla(0,0%,100%,0));background-repeat:no-repeat;background-size:20px 100%}.rtable--flip tbody tr:last-child a,.rtable td:last-child{background-image:linear-gradient(270deg,#fff 50%,hsla(0,0%,100%,0));background-repeat:no-repeat;background-position:100% 0;background-size:20px 100%}.rtable th{font-size:11px;text-align:left;text-transform:uppercase;background:#f2f0e6}.rtable td,.rtable th{padding:6px 12px;border:1px solid #d9d7ce}.rtable--flip{display:flex;overflow:hidden;background:none}.rtable--flip thead{display:flex;flex-shrink:0;min-width:min-content}.rtable--flip tbody{display:flex;position:relative;overflow-x:auto;overflow-y:hidden}.rtable--flip tr a{display:flex;flex-direction:column;min-width:min-content;flex-shrink:0}.rtable--flip td,.rtable--flip th{display:block}.rtable--flip td{background-image:none!important;border-left:0}.rtable--flip td:not(:last-child),.rtable--flip th:not(:last-child){border-bottom:0}
+
+/*!
+// CodePen house keeping
+*/body{margin:0;padding:25px;color:#494b4d;font-size:14px;line-height:20px}h1,h2,h3{margin:0 0 10px;color:#1d97bf}h1{font-size:25px;line-height:30px}h2{font-size:20px;line-height:25px}h3{font-size:16px;line-height:20px}table{margin-bottom:30px}code{background:#fffbcc;font-size:12px}h1[data-v-708bfc81],h2[data-v-708bfc81]{font-weight:400}ul[data-v-708bfc81]{list-style-type:none;padding:0}li[data-v-708bfc81]{display:inline-block;margin:0 10px}a[data-v-708bfc81]{color:#42b983}
+/*# sourceMappingURL=app.6afc85c60466631552d1f3cf9f4c8a32.css.map */
