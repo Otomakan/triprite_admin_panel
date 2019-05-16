@@ -11,7 +11,7 @@
 <script>
 import axios from 'axios'
 import MyTable from './MyTable'
-
+console.log(process.env)
 
 export default {
   name: 'HelloWorld',
@@ -27,7 +27,7 @@ export default {
   mounted () {
     const verificationToken = localStorage.getItem('verificationToken')
     axios
-      .get('http://localhost:3000/admin/all-reservations',  {headers:{
+      .get(process.env.BACKEND_SERVER +'/admin/all-reservations',  {headers:{
                 verificationToken: verificationToken
             }
             })
