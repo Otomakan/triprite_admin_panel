@@ -24,13 +24,7 @@ export default {
     MyTable
   },
   mounted () {
-      console.log("ROUTE IS ")
-      console.log(this.$route)
-      console.log(`RES ID : ${this.reservationID}`)
       const verificationToken = localStorage.getItem('verificationToken')
-      console.log("VERIF TOKEN")
-      console.log(verificationToken)
-      
     axios
       .get('http://localhost:3000/admin/flight-and-passenger-details/' + this.reservationID, 
             {headers:{
@@ -57,5 +51,8 @@ li {
 }
 a {
   color: #42b983;
+}
+.hello{
+  width:100vw;
 }
 </style>

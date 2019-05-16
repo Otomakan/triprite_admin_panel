@@ -25,8 +25,12 @@ export default {
     MyTable
   },
   mounted () {
+    const verificationToken = localStorage.getItem('verificationToken')
     axios
-      .get('http://localhost:3000/admin/all-reservations')
+      .get('http://localhost:3000/admin/all-reservations',  {headers:{
+                verificationToken: verificationToken
+            }
+            })
       .then(response => {console.log(response.data)
       return(this.allReservations = response.data)})
   }
@@ -48,5 +52,8 @@ li {
 }
 a {
   color: #42b983;
+}
+.hello{
+  width:100vw;
 }
 </style>

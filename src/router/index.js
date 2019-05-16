@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import AllReservations from '@/components/AllReservations'
 import ReservationDetail from '@/components/ReservationDetail'
 Vue.use(Router)
 
@@ -8,9 +8,9 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/all-reservations',
+      path: '/',
       name: 'All reservations',
-      component: HelloWorld
+      component: AllReservations
     },
     {
       path: '/reservation/:id',

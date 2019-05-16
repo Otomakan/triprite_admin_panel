@@ -1,7 +1,8 @@
 <template>
 <div>
     <div class="input-wrapper">
-    <input  v-model="input" placeholder="n">
+    Search the Table
+    <input  v-model="input" placeholder="">
     </div>
   <table class="rtable">
     <thead>
@@ -88,8 +89,43 @@ export default {
 // http://dbushell.com/2016/03/04/css-only-responsive-tables/
 // by David Bushell
 */
+
+:root {
+  --dark-grey: rgba(0, 0, 0, 0.65);
+  --grey: rgb(128, 129, 130);
+  --light-grey: #dadce0;
+  --light-brown-grey: #bdada3;
+  --primary-color: rgb(30, 121, 214);
+  --secondary-color:  rgb(255, 48, 101);
+  --thirdly-color: rgb(21, 34, 102);
+  --secondary-green:rgb(80, 208, 137);
+  --primary-green:rgb(28, 187, 99);
+  --light-blue: rgb(79, 176, 237);
+  --primary-orange: rgb(244, 131, 7);
+  position: absolute;
+  --yellow: #FFA400;
+  --white: white;
+  --border-radius:10px;
+  --font-size-extra-small:10px;
+  --font-size-small:12px;
+  --font-size-medium:15px;
+  --font-size-large:18px;
+  --font-size-huge:40px;
+  --input-height:50px;
+  --input-padding:5px;
+  --input-margin:5px;
+  --main-font: "Roboto";
+  --secondary-font: "Open Sans";
+  --third-font: 'Montserrat', sans-serif;
+  --box-shadow-card: 0px 5px 9px 0px rgba(0, 0, 0, 0.13);
+  /* --box-shadow-card:-3.554px 33.814px 122px 0px rgba(121, 63, 4, 0.33); */
+  --box-shadow-button: 0px 5px 9px 0px rgba(0, 0, 0, 0.13);
+  --box-shadow-button-hover:  0px 5px 9px 0px rgba(0, 0, 0, 0.23);
+  --padding-card: 15px;
+}
 .input-wrapper{
     width:100vw;
+    margin:10px;
 }
 a {
     text-decoration: none;
@@ -131,7 +167,7 @@ a {
 // gradient on the first cells to hide the left shadow
 .rtable td:first-child,
 .rtable--flip tbody  tr:first-child a {
-  background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+  // background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
   background-repeat: no-repeat;
   background-size: 20px 100%;
 }
@@ -139,7 +175,7 @@ a {
 // gradient on the last cells to hide the right shadow
 .rtable td:last-child,
 .rtable--flip tbody tr:last-child a {
-  background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+  // background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
   background-repeat: no-repeat;
   background-position: 100% 0;
   background-size: 20px 100%;
@@ -149,13 +185,20 @@ a {
   font-size: 11px;
   text-align: left;
   text-transform: uppercase;
-  background: #f2f0e6;
+  background: var(--secondary-color);
+  color: white;
+}
+.rtable tr {
+  cursor: pointer;
+  &:hover{
+    background: var(--light-grey);
+  }
 }
 
 .rtable th,
 .rtable td {
   padding: 6px 12px;
-  border: 1px solid #d9d7ce;
+  border: 1px solid var(--secondary-color);
 }
 
 .rtable--flip {
