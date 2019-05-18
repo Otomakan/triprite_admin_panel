@@ -26,7 +26,7 @@ export default {
   mounted () {
       const verificationToken = localStorage.getItem('verificationToken')
     axios
-      .get(process.env.VUE_APP_SERVER_ADDRESS + '/admin/flight-and-passenger-details/' + this.reservationID, 
+      .get(process.env.BACKEND_SERVER + '/admin/flight-and-passenger-details/' + this.reservationID, 
             {headers:{
                 verificationToken: verificationToken
             }})
